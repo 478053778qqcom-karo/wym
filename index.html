@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>非遗文化体验项目</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Noto Serif SC',serif;
+    background:#111;
+    color:#f5f5f5;
+    line-height:1.8;
+    letter-spacing:0.5px;
+}
+
+section{
+    padding:100px 15%;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+h1{
+    font-size:48px;
+    font-weight:300;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:28px;
+    font-weight:400;
+    margin-bottom:30px;
+    opacity:0.9;
+}
+
+p{
+    max-width:800px;
+    opacity:0.85;
+}
+
+.highlight{
+    font-size:22px;
+    margin-top:30px;
+    opacity:1;
+}
+
+.stat{
+    font-size:42px;
+    font-weight:600;
+    margin:20px 0;
+}
+
+.card{
+    background:#1a1a1a;
+    padding:30px;
+    margin-bottom:20px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.card:hover{
+    background:#222;
+}
+
+.hidden{
+    display:none;
+    margin-top:15px;
+    opacity:0.8;
+}
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<section class="fade">
+<h1>掐丝珐琅 · 当代城市文化体验计划</h1>
+<p class="highlight">
+让传统工艺不止于陈列，而成为可触摸、可参与、可转化的城市文化现场。
+</p>
+</section>
+
+<section class="fade">
+<h2>一 · 项目理念</h2>
+<p>
+本项目以中国传统非遗工艺——掐丝珐琅画为核心，
+结合城市文化语境进行创造性转化与创新性发展，
+构建兼具体验性与传播力的文化空间。
+</p>
+<p>
+我们不仅提供手作体验，
+更提供一次进入传统美学结构的过程。
+</p>
+</section>
+
+<section class="fade">
+<h2>二 · 市场洞察</h2>
+
+<div class="stat">5.62 万元</div>
+<p>佛山市居民人均可支配收入（2020）</p>
+
+<div class="stat">309 家</div>
+<p>本地手工体验企业数量（暂无掐丝珐琅专门馆）</p>
+
+<p class="highlight">
+市场存在结构性空缺：非遗深度体验型空间仍属蓝海。
+</p>
+</section>
+
+<section class="fade">
+<h2>三 · 目标客群</h2>
+<p>
+中高收入青年群体 · 在校大学生 · 城市游客 · 白领阶层 · 情侣社交场景需求者
+</p>
+</section>
+
+<section class="fade">
+<h2>四 · 产品体系（点击展开）</h2>
+
+<div class="card" onclick="toggle(this)">
+掐丝珐琅画手作体验
+<div class="hidden">
+由专业美术指导协助构图，技术人员辅助完成，顾客亲自制作完整画作。
+</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+工艺饰品体验
+<div class="hidden">
+制作吊坠、首饰等小型作品，降低体验门槛，提高复购率。
+</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+定制与零售
+<div class="hidden">
+提供个性化定制与成品销售服务，形成稳定现金流。
+</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+材料包 + 线上教学
+<div class="hidden">
+延伸线上市场，实现空间外的文化传播与持续盈利。
+</div>
+</div>
+
+</section>
+
+<section class="fade">
+<h2>五 · 竞争结构</h2>
+
+<p class="highlight">我们的优势</p>
+<p>
+定价更具吸引力 · 工艺独特性高 · 支持定制 · 空间体验感强
+</p>
+
+<p class="highlight">潜在挑战</p>
+<p>
+技术人才招聘难度高 · 宣传周期较长 · 前期培训成本较高
+</p>
+
+</section>
+
+<section class="fade">
+<h2>六 · 商业模型</h2>
+
+<p>
+体验收入 + 定制服务 + 成品零售 + 材料包延伸销售
+</p>
+
+<p>
+前期目标占据本地 3% 市场份额，
+后期逐步扩大至 10%，
+再以连锁模式进入一线与新一线城市。
+</p>
+</section>
+
+<section class="fade">
+<h2>七 · 创业者视角</h2>
+
+<p>
+调研佛山岭南新天地与广州手作空间，
+结合粤文化美术学习背景与思想政治教育专业训练，
+希望在文化传播与价值引导之间建立实践路径。
+</p>
+
+<p>
+这不仅是一项商业计划，
+更是一种关于文化如何进入公共生活的实验。
+</p>
+
+</section>
+
+<section style="text-align:center;padding:80px 0;">
+<p>© 文化体验创业构想展示页</p>
+</section>
+
+<script>
+function toggle(element){
+    let hidden = element.querySelector(".hidden");
+    hidden.classList.toggle("hidden");
+}
+
+const faders = document.querySelectorAll('.fade');
+
+const appearOptions = {
+    threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry=>{
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+    });
+}, appearOptions);
+
+faders.forEach(fader=>{
+    appearOnScroll.observe(fader);
+});
+</script>
+
+</body>
+</html>
