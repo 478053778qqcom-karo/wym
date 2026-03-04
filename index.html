@@ -2,203 +2,244 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>掐丝珐琅 · 文化体验计划</title>
+<title>王佳美 | 文艺学作品集</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
-body{
-    margin:0;
-    font-family:'Noto Serif SC',serif;
-    background:#0f0f0f;
-    color:#f5f5f5;
-    line-height:1.8;
-    letter-spacing:0.5px;
+body {
+    margin: 0;
+    font-family: "Noto Serif SC", serif;
+    background: #fdfdfd;
+    color: #111;
+    line-height: 1.9;
 }
 
-section{
-    padding:100px 15%;
+.container {
+    width: 60%;
+    margin: 120px auto;
 }
 
-h1{
-    font-size:48px;
-    font-weight:300;
+h1 {
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 1px;
 }
 
-h2{
-    font-size:30px;
-    font-weight:400;
-    margin-bottom:30px;
+.subtitle {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
 }
 
-p{
-    max-width:800px;
-    opacity:0.85;
+.section {
+    margin-top: 140px;
 }
 
-.highlight{
-    font-size:22px;
-    margin-top:30px;
+.section-title {
+    font-size: 18px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 
-.hero{
-    height:100vh;
-    background:url("images/detail.jpg") center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
+.work {
+    margin-bottom: 40px;
 }
 
-.hero-overlay{
-    background:rgba(0,0,0,0.65);
-    padding:60px;
-    text-align:center;
+.work-title {
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.fade{
-    opacity:0;
-    transform:translateY(40px);
-    transition:all 1s ease;
+.work-title:hover {
+    letter-spacing: 1px;
 }
 
-.fade.show{
-    opacity:1;
-    transform:translateY(0);
+.work-content {
+    display: none;
+    margin-top: 12px;
+    color: #444;
+    font-size: 14px;
 }
 
-/* 翻转卡片 */
-
-.flip-card{
-  width:100%;
-  height:260px;
-  perspective:1000px;
-  margin-bottom:40px;
+a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #999;
+    transition: 0.3s;
 }
 
-.flip-card-inner{
-  position:relative;
-  width:100%;
-  height:100%;
-  transition:transform 0.8s;
-  transform-style:preserve-3d;
+a:hover {
+    color: #555;
 }
 
-.flip-card:hover .flip-card-inner{
-  transform:rotateY(180deg);
+.book-category {
+    margin-top: 40px;
 }
 
-.flip-card-front, .flip-card-back{
-  position:absolute;
-  width:100%;
-  height:100%;
-  backface-visibility:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:30px;
-  background:#1a1a1a;
-  border:1px solid rgba(255,255,255,0.08);
+.book-list {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
 }
 
-.flip-card-front{
-    font-size:22px;
+.book-category-title {
+    cursor: pointer;
+    margin-bottom: 8px;
 }
 
-.flip-card-back{
-  transform:rotateY(180deg);
-  flex-direction:column;
+.book-category-title:hover {
+    letter-spacing: 1px;
 }
 
-.flip-card-back img{
-  width:70%;
-  margin-bottom:15px;
+.footer {
+    margin-top: 200px;
+    font-size: 13px;
+    color: #777;
 }
-
-footer{
-    text-align:center;
-    padding:60px;
-    opacity:0.6;
-}
-
 </style>
 </head>
 
 <body>
 
-<section class="hero">
-    <div class="hero-overlay">
-        <h1>掐丝珐琅 · 当代城市文化体验计划</h1>
-        <p class="highlight">
-        让传统工艺不止于陈列，而成为可触摸、可参与、可转化的城市文化现场。
-        </p>
-    </div>
-</section>
+<div class="container">
 
-<section class="fade">
-<h2>项目理念</h2>
-<p>
-本项目以掐丝珐琅为核心，
-结合城市文化语境进行创造性转化，
-构建兼具体验性与传播力的文化空间。
-</p>
-
-<img src="images/craft.jpg" style="width:100%;margin-top:40px;">
-</section>
-
-<section class="fade">
-<h2>产品体系</h2>
-
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      掐丝珐琅画手作体验
-    </div>
-    <div class="flip-card-back">
-      <img src="images/product1.jpg">
-      <p>由专业美术指导协助构图，顾客完成完整画作。</p>
-    </div>
-  </div>
+<h1>王佳美</h1>
+<div class="subtitle">
+文艺学（文艺批评方向）<br>
+文字作为理解现实的一种方式
 </div>
 
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      工艺饰品体验
-    </div>
-    <div class="flip-card-back">
-      <img src="images/product2.jpg">
-      <p>制作吊坠、首饰等小型作品，降低体验门槛。</p>
-    </div>
-  </div>
+<!-- 作品部分 -->
+
+<div class="section">
+<div class="section-title">阅读与批评</div>
+
+<div class="work">
+<div class="work-title" onclick="toggle(this)">《悠悠岁月》：或许某一刻我们心灵相通</div>
+<div class="work-content">
+围绕个体记忆与女性经验展开的阅读与回应。<br>
+<a href="https://mp.weixin.qq.com/s/kjyeMt7Mb0BVve7qJGwh-w" target="_blank">查看全文</a>
+</div>
 </div>
 
-</section>
+<div class="work">
+<div class="work-title" onclick="toggle(this)">《我在故宫修文物》：用历史的尘埃造一座乌托邦</div>
+<div class="work-content">
+从工艺与时间维度理解传统文化的精神结构。<br>
+<a href="https://mp.weixin.qq.com/s/rpXS9JQu6oBkL1AQA5PfUw" target="_blank">查看全文</a>
+</div>
+</div>
 
-<footer>
-© 文化体验创业构想展示页
-</footer>
+<div class="work">
+<div class="work-title" onclick="toggle(this)">马丽华《藏北游历》：探险者用秘境丈量世界</div>
+<div class="work-content">
+关于边疆书写与精神远行的阅读笔记。<br>
+<a href="https://mp.weixin.qq.com/s/NzX_Bz5yE-PLBBRDI4yf0g" target="_blank">查看全文</a>
+</div>
+</div>
+
+<div class="work">
+<div class="work-title" onclick="toggle(this)">非虚构专题：寒假特种兵环游三大洲</div>
+<div class="work-content">
+多部非虚构文本的整合阅读与现实议题思考。<br>
+<a href="https://mp.weixin.qq.com/s/W-qfkNKPW2MpRgsOhNCwsw" target="_blank">查看全文</a>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">文化策划与文本转化</div>
+
+<div class="work">
+<div class="work-title" onclick="toggle(this)">华师乐集 · 校长书单（古典乐场）</div>
+<div class="work-content">
+音乐与文本叙事结合的尝试。<br>
+<a href="https://mp.weixin.qq.com/s/VlVjNZ1yb4KgPQrfEsuWCA" target="_blank">查看全文</a>
+</div>
+</div>
+
+<div class="work">
+<div class="work-title" onclick="toggle(this)">轻听 · 敦煌</div>
+<div class="work-content">
+在历史意象中转译声音的表达实践。<br>
+<a href="https://mp.weixin.qq.com/s/1qvLa_1q3JB3KLO-yBJxSg" target="_blank">查看全文</a>
+</div>
+</div>
+
+<div class="work">
+<div class="work-title" onclick="toggle(this)">家 · 国</div>
+<div class="work-content">
+家国叙事中的音乐与情感结构。<br>
+<a href="https://mp.weixin.qq.com/s/ffSu4V8s33-koRfwaOCfeQ" target="_blank">查看全文</a>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">现实观察与报道</div>
+
+<div class="work">
+<div class="work-title" onclick="toggle(this)">《花生变“金豆”，一亩地双收益》</div>
+<div class="work-content">
+广东“两会”人大代表特别报道。<br>
+<a href="https://www.sohu.com/a/753902079_161795" target="_blank">查看全文</a>
+</div>
+</div>
+</div>
+
+<!-- 阅读轨迹 -->
+
+<div class="section">
+<div class="section-title">阅读轨迹</div>
+
+<div class="book-category">
+<div class="book-category-title" onclick="toggle(this)">文学与记忆</div>
+<div class="book-list">
+《悠悠岁月》、安妮·埃尔诺系列、《不安之书》、《娜塔莎之舞》
+</div>
+</div>
+
+<div class="book-category">
+<div class="book-category-title" onclick="toggle(this)">美学与艺术理论</div>
+<div class="book-list">
+《美的历程》、《金蔷薇》、《永恒史》、《唐宋词十七讲》
+</div>
+</div>
+
+<div class="book-category">
+<div class="book-category-title" onclick="toggle(this)">哲学与思想</div>
+<div class="book-list">
+《逃避自由》、《民主主义与教育》、《打开：周濂的100堂西方哲学课》、《探究（一）》
+</div>
+</div>
+
+<div class="book-category">
+<div class="book-category-title" onclick="toggle(this)">现实与非虚构</div>
+<div class="book-list">
+《失落的卫星》、《我在北京送快递》、《克拉克森的农村》、《大灭绝时代》、《寻找光的旅程》、《私有制、国家和国家的起源》
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 王佳美
+</div>
+
+</div>
 
 <script>
-const faders = document.querySelectorAll('.fade');
-
-const appearOptions = {
-    threshold: 0.2
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry=>{
-        if(!entry.isIntersecting) return;
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-    });
-}, appearOptions);
-
-faders.forEach(fader=>{
-    appearOnScroll.observe(fader);
-});
+function toggle(element) {
+    var content = element.nextElementSibling;
+    if(content.style.display === "block"){
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+}
 </script>
 
 </body>
