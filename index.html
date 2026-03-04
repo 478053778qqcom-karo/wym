@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>王佳美 | 文艺学作品集</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>王佳美｜文艺学作品集</title>
 
 <style>
 body {
     margin: 0;
-    font-family: "Noto Serif SC", serif;
-    background: #fdfdfd;
-    color: #111;
+    font-family: "Noto Serif SC", "Songti SC", serif;
+    background: #f8f8f6;
+    color: #222;
     line-height: 1.9;
+    letter-spacing: 0.5px;
     opacity: 0;
     transition: opacity 1.5s ease;
 }
@@ -21,27 +21,13 @@ body.loaded {
     opacity: 1;
 }
 
-.container {
-    width: 60%;
-    margin: 120px auto;
-}
-
-h1 {
-    font-weight: 400;
-    font-size: 32px;
-}
-
-.subtitle {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #666;
-}
-
 .section {
-    margin-top: 140px;
+    max-width: 760px;
+    margin: 120px auto;
+    padding: 0 20px;
     opacity: 0;
     transform: translateY(40px);
-    transition: all 1s ease;
+    transition: all 1.2s ease;
 }
 
 .section.visible {
@@ -49,196 +35,269 @@ h1 {
     transform: translateY(0);
 }
 
-.section-title {
-    font-size: 18px;
-    margin-bottom: 40px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
+/* 首页 */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.work {
+.intro {
+    font-size: 14px;
+    color: #666;
     margin-bottom: 30px;
-}
-
-.work a {
-    font-size: 16px;
-    text-decoration: none;
-    color: #000;
-    transition: 0.3s;
-}
-
-.work a:hover {
     letter-spacing: 1px;
 }
 
-.work-desc {
-    font-size: 13px;
-    color: #666;
-    opacity: 0;
-    transition: 0.3s;
+.hero h1 {
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
 }
 
-.work:hover .work-desc {
-    opacity: 1;
+/* 极简箭头 */
+
+.arrow {
+    margin-top: 60px;
+    width: 20px;
+    height: 20px;
+    border-left: 1px solid #555;
+    border-bottom: 1px solid #555;
+    transform: rotate(-45deg);
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: rotate(-45deg) translateY(0); }
+    50% { transform: rotate(-45deg) translateY(8px); }
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* 卡片 */
+
+.card {
+    background: #f1f1ed;
+    padding: 40px;
+    border-left: 2px solid #bbb;
+    font-size: 15px;
+}
+
+/* 按钮 */
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 8px 16px;
+    border: 1px solid #222;
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background: #222;
+    color: #fff;
+}
+
+/* 作品列表 */
+
+.work-list a {
+    display: block;
+    margin-bottom: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: opacity 0.4s;
+}
+
+.work-list a:hover {
+    opacity: 0.5;
+}
+
+/* 书单 */
+
+.book-category {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
 }
 
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
-    margin-top: 40px;
 }
 
 .book {
+    padding: 18px;
     border: 1px solid #ddd;
-    padding: 20px;
-    font-size: 13px;
-    text-align: center;
-    transition: 0.3s;
-    cursor: default;
+    font-size: 14px;
+    transition: all 0.4s ease;
 }
 
 .book:hover {
-    border-color: #000;
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    border-color: #999;
 }
 
-#topBtn {
+/* 回到顶部 */
+
+.back-top {
     position: fixed;
-    bottom: 40px;
-    right: 40px;
-    font-size: 13px;
+    right: 30px;
+    bottom: 30px;
+    background: #222;
+    color: #fff;
+    padding: 10px 14px;
+    font-size: 12px;
     cursor: pointer;
-    border-bottom: 1px solid #000;
     display: none;
+}
+
+.back-top.show {
+    display: block;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- 首页 -->
+<div class="hero">
+    <div class="intro">
+        王佳美 ｜ 报考专业：文艺学（中国传媒大学）
+    </div>
 
-<h1>王佳美</h1>
-<div class="subtitle">
-文艺学（文艺批评方向）<br>
-文字作为理解现实的一种方式
+    <h1>《悠悠岁月》：或许某一刻我们心意相通</h1>
+
+    <div class="arrow" onclick="scrollToContent()"></div>
 </div>
 
+<div id="content">
+
+<!-- 写作说明 -->
 <div class="section">
-<div class="section-title">阅读与批评</div>
+<h2>写作说明</h2>
 
-<div class="work">
-<a href="https://mp.weixin.qq.com/s/kjyeMt7Mb0BVve7qJGwh-w" target="_blank">
-《悠悠岁月》：或许某一刻我们心灵相通
+<p>
+在《悠悠岁月》一文中，我以安妮·埃尔诺的作品为研究对象，围绕其“无人称写作”与记忆书写方式展开分析。文章重点讨论了她如何通过以“我们”取代“我”的叙述策略，将个体经验转化为时代记忆，并在阶级流动与女性经验的语境中构建一种具有社会维度的自传体写作。
+</p>
+
+<p>
+在论述过程中，我结合女性主义批评视角与社会历史语境，对文本中的“羞耻”“阶级差异”“记忆公共性”等问题进行分析，同时关注文本形式本身的表达策略，而非仅停留于情感共鸣。文章结构上采取由阅读体验进入、再回到文本内部形式与社会结构的路径，力求在阅读感受与理论理解之间保持必要的节制与平衡。
+</p>
+
+<a class="button" href="https://mp.weixin.qq.com/s/kjyeMt7Mb0BVve7qJGwh-w" target="_blank">
+查看原文
 </a>
-<div class="work-desc">围绕个体记忆与女性经验展开的阅读与回应</div>
+
 </div>
 
-<div class="work">
-<a href="https://mp.weixin.qq.com/s/rpXS9JQu6oBkL1AQA5PfUw" target="_blank">
-《我在故宫修文物》：用历史的尘埃造一座乌托邦
-</a>
-<div class="work-desc">从工艺与时间维度理解传统文化的精神结构</div>
-</div>
-
-<div class="work">
-<a href="https://mp.weixin.qq.com/s/NzX_Bz5yE-PLBBRDI4yf0g" target="_blank">
-马丽华《藏北游历》：探险者用秘境丈量世界
-</a>
-<div class="work-desc">关于边疆书写与精神远行的阅读笔记</div>
-</div>
-
-<div class="work">
-<a href="https://mp.weixin.qq.com/s/W-qfkNKPW2MpRgsOhNCwsw" target="_blank">
-非虚构专题：寒假特种兵环游三大洲
-</a>
-<div class="work-desc">多部非虚构文本的整合阅读与现实议题思考</div>
-</div>
-</div>
-
+<!-- 心路历程 -->
 <div class="section">
-<div class="section-title">文化策划与文本转化</div>
-
-<div class="work">
-<a href="https://mp.weixin.qq.com/s/VlVjNZ1yb4KgPQrfEsuWCA" target="_blank">
-华师乐集 · 校长书单（古典乐场）
-</a>
-<div class="work-desc">音乐与文本叙事结合的尝试</div>
-</div>
-
-<div class="work">
-<a href="https://mp.weixin.qq.com/s/1qvLa_1q3JB3KLO-yBJxSg" target="_blank">
-轻听 · 敦煌
-</a>
-<div class="work-desc">在历史意象中转译声音的表达实践</div>
-</div>
-
-<div class="work">
-<a href="https://mp.weixin.qq.com/s/ffSu4V8s33-koRfwaOCfeQ" target="_blank">
-家 · 国
-</a>
-<div class="work-desc">家国叙事中的音乐与情感结构</div>
+<h2>心路历程</h2>
+<div class="card">
+写篇文对我而言是一趟独一无二的旅行，借由读者的眼睛，我看到了这本书，但在211页之外我看到了更多，她在短短几天为我打开了无数个窗口，女性主义的、文学的、社会学的、历史的，除了文字还有纪录片、播客、音乐…她是如此丰盈，像电影一样悠长，又如此精致犀利，只有文学才能做到这种程度的表达。我尽我所能精简文字、编织结构、做时间轴，只希望能让读者多停留一会，安静片刻，听到她的声音。
 </div>
 </div>
 
+<!-- 其他作品 -->
 <div class="section">
-<div class="section-title">现实观察与报道</div>
+<h2>其他作品</h2>
 
-<div class="work">
-<a href="https://www.sohu.com/a/753902079_161795" target="_blank">
-《花生变“金豆”，一亩地双收益》
-</a>
-<div class="work-desc">广东“两会”人大代表特别报道</div>
-</div>
+<div class="work-list">
+<a href="https://mp.weixin.qq.com/s/rpXS9JQu6oBkL1AQA5PfUw" target="_blank">《我在故宫修文物》：用历史的尘埃造一座乌托邦</a>
+<a href="https://mp.weixin.qq.com/s/NzX_Bz5yE-PLBBRDI4yf0g" target="_blank">《藏北游历》：探险者用秘境丈量世界</a>
+<a href="https://mp.weixin.qq.com/s/W-qfkNKPW2MpRgsOhNCwsw" target="_blank">非虚构专题：寒假特种兵环游三大洲</a>
+<a href="https://mp.weixin.qq.com/s/VlVjNZ1yb4KgPQrfEsuWCA" target="_blank">校长书单（古典乐场）</a>
+<a href="https://mp.weixin.qq.com/s/1qvLa_1q3JB3KLO-yBJxSg" target="_blank">轻听·敦煌</a>
+<a href="https://mp.weixin.qq.com/s/ffSu4V8s33-koRfwaOCfeQ" target="_blank">家·国</a>
+<a href="https://www.sohu.com/a/753902079_161795" target="_blank">《花生变“金豆”，一亩地双收益》</a>
 </div>
 
+</div>
+
+<!-- 阅读结构 -->
 <div class="section">
-<div class="section-title">阅读轨迹</div>
+<h2>阅读结构</h2>
 
+<div class="book-category">文学与记忆</div>
 <div class="book-grid">
-<div class="book">安妮·埃尔诺</div>
-<div class="book">不安之书</div>
-<div class="book">娜塔莎之舞</div>
-<div class="book">美的历程</div>
-<div class="book">金蔷薇</div>
-<div class="book">永恒史</div>
-<div class="book">唐宋词十七讲</div>
-<div class="book">逃避自由</div>
-<div class="book">民主主义与教育</div>
-<div class="book">失落的卫星</div>
-<div class="book">大灭绝时代</div>
-<div class="book">我在北京送快递</div>
+<div class="book">《重读：在咖啡馆遇见14个作家》</div>
+<div class="book">《悠悠岁月》</div>
+<div class="book">《黑夜里的素歌》</div>
+<div class="book">《金蔷薇》</div>
+<div class="book">《不安之书》</div>
+<div class="book">《娜塔莎之舞》</div>
 </div>
+
+<div class="book-category">思想与社会结构</div>
+<div class="book-grid">
+<div class="book">《逃避自由》</div>
+<div class="book">《私有制、国家和家庭的起源》</div>
+<div class="book">《民主主义与教育》</div>
+<div class="book">《打开：周濂的100堂西方哲学课》</div>
+<div class="book">《失落的卫星》</div>
+<div class="book">《大灭绝时代》</div>
+</div>
+
+<div class="book-category">美学与文艺理论</div>
+<div class="book-grid">
+<div class="book">《美的历程》</div>
+<div class="book">《永恒史》</div>
+<div class="book">《唐宋词十七讲》</div>
+<div class="book">《探究（一）》</div>
 </div>
 
 </div>
 
-<div id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-回到顶部
 </div>
+
+<div class="back-top" onclick="scrollToTop()">回到顶部</div>
 
 <script>
-window.onload = function(){
+window.onload = function() {
     document.body.classList.add("loaded");
+    revealOnScroll();
 };
 
-const sections = document.querySelectorAll(".section");
+function scrollToContent() {
+    document.getElementById("content").scrollIntoView({ behavior: "smooth" });
+}
 
-window.addEventListener("scroll", function(){
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+function revealOnScroll() {
+    const sections = document.querySelectorAll(".section");
+    const backTop = document.querySelector(".back-top");
+
     sections.forEach(section => {
         const rect = section.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 100){
+        if (rect.top < window.innerHeight - 100) {
             section.classList.add("visible");
         }
     });
 
-    if(window.scrollY > 400){
-        document.getElementById("topBtn").style.display = "block";
+    if (window.scrollY > 300) {
+        backTop.classList.add("show");
     } else {
-        document.getElementById("topBtn").style.display = "none";
+        backTop.classList.remove("show");
     }
-});
+}
 </script>
 
 </body>
